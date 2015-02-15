@@ -1,0 +1,13 @@
+{% block title %} Benutzer anzeigen {% endblock %}
+
+{% block content %}
+<h1> Benutzer anzeigen </h1>
+
+{% for user in users %}
+<h2>
+  <a href="{{ user }}">
+     {{user.id}} .get_absolute_url
+  </a>
+</h2>
+{% endfor %}
+{% endblock %}
