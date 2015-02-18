@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'management'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,8 +62,8 @@ WSGI_APPLICATION = 'LF6.wsgi.application'
 
 DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'LF6',                      # Or path to database file if using sqlite3.
+            'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': os.path.join(BASE_DIR, 'LF6.db'),                      # Or path to database file if using sqlite3.
             'USER': 'LF6',
             'PASSWORD': 'asdfgh',
             'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.

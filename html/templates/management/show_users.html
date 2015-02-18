@@ -3,11 +3,10 @@
 {% block content %}
 <h1> Benutzer anzeigen </h1>
 
+<table>
+  <tr> <th> Name </th> <th> Vorname </th> <th> Geburtsdatum </th> </tr>
 {% for user in users %}
-<h2>
-  <a href="{{ user }}">
-     {{user.id}} .get_absolute_url
-  </a>
-</h2>
+  <tr></tr>
 {% endfor %}
+</table>
 {% endblock %}
